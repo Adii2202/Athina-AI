@@ -1,7 +1,7 @@
 # Create and run a local RAG pipeline from scratch
 
 ![alt text](image.png)
-
+![alt text](image-1.png)
 The goal of this notebook is to build a RAG (Retrieval Augmented Generation) pipeline from scratch.
 
 Specifically, we'd like to be able to open a PDF file, ask questions (queries) of it and have them answered by a Large Language Model (LLM).
