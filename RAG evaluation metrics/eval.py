@@ -9,10 +9,8 @@ def evaluate_assistant(assistant, test_queries, expected_answers):
         predicted_answer = assistant.interact_with_llm(query)
         predicted_answers.append(predicted_answer)
 
-    # Calculate accuracy
     accuracy = accuracy_score(expected_answers, predicted_answers)
 
-    # If answers are available for evaluation, calculate precision, recall, and F1-score
     if expected_answers:
         precision = precision_score(expected_answers, predicted_answers, average='micro')
         recall = recall_score(expected_answers, predicted_answers, average='micro')
@@ -23,7 +21,6 @@ def evaluate_assistant(assistant, test_queries, expected_answers):
 
     print("Accuracy: {:.2f}".format(accuracy))
 
-# Test queries and expected answers (ground truth)
 test_queries = [
     "What is the definition of 'vandalism' in the Churchill insurance policy?",
     "How can I contact Churchill for windscreen claims?",
@@ -90,5 +87,4 @@ expected_answers = [
     "Churchill does not cover losses, damages, or injuries caused by automated car functions if their use is unlawful [T6]."
 ]
 
-# Evaluate the assistant
 evaluate_assistant(ai_assistant, test_queries, expected_answers)
